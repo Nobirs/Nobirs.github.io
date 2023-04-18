@@ -96,4 +96,48 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile__container {
     margin: 12vh 6vw 3vh 6vw;
+    margin-block-start: 12vh;
+}
+
+.MenuImage {
+    margin-left: auto;
+}
+
+.MenuBar {
+    display: none;
+}
+
+.stop_scroll {
+    overflow: hidden;
+}
+
+.MenuBar.active {
+    display: block;
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #2b2f2e;
+    color: white;
+    overflow: hidden;
+}
+
+.MenuBar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav.active ul li {
+    margin: 10vh;
+    font-size: 1.7rem;
+    text-decoration: none;
+}
+
+.navLink {
+    text-decoration: none;
+    font: outfit;
+    color: white;
 }
