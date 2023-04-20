@@ -11,7 +11,7 @@
 <body>
     <header class="sticky">
         <h1 class="Header">My portfolio</h1>
-        <a class="MenuImage" class="ImageLink"><img src="images/icons8-menu-64.png" alt="Menu"></a>
+        <a class="MenuImage ImageLink"><img src="images/icons8-menu-64.png" alt="Menu"></a>
         <nav class="MenuBar">
             <ul>
                 <li><a class="navLink" href="#AboutMe">About Me</a></li>
@@ -29,62 +29,77 @@
                     <div>
                         <img class="profile_image" src="images/anonymous_profile.jpg" alt="">
                         <p class="profile_description">
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
-                            Some Information about me.
+                            Всем привет! Меня зовут Александр, и я Fullstack-разработчик на Python(на самом деле я еще учусь).
+                            Когда-нибудь здесь появится достойная аватарка меня, и крутой список моих навыков
+                            (ну а пока будем считать что я не фотогеничный и ничего не умею). Увлекаюсь программированием с 2017 года.
+                            Для меня программирование - это постоянное развитие и изучение нового.
+
                         </p>
                     </div>
                 </details>
             </div>
         </div>
 
-        <div id="MyProjects" class="container">
-            <details>
+        <div id="MyProjects" class="container projects__container">
+            <details open>
                 <summary class="description__header">My Projects</summary>
+                <div class="Projects">
+                    <div class="project__item chatRoom__project">
+                        <img class="project__image" src="images/ChatRoom.gif" alt="ChatRoom">
+                        <p class="project__description">
+                            Проект чат-комнат, реализованный с использованием HTML/CSS/JavaScript & Django.
+                            <br/><br/>Ссылка на репозиторий: <a href="https://github.com/Nobirs/SFChatRoom.git">https://github.com/Nobirs/SFChatRoom.git</a> .
+                        </p>
+                    </div>
+                    <div class="project__item dashBoard__project">
+                        <img class="project__image" src="images/DashBoard.gif" alt="DashBoard">
+                        <p class="project__description">
+                            Доска объявлений, написанная на Django.
+                            <br/><br/>Ссылка на репозиторий: <a href="https://github.com/Nobirs/SFDashboard.git">https://github.com/Nobirs/SFDashboard.git</a> .
+                        </p>
+                    </div>
+                    <div class="project__item newsPortal__project">
+                        <img class="project__image" src="images/NewsPortal.gif" alt="NewsPortal">
+                        <p class="project__description">
+                            Новостной портал, с полагающимся к нему функционалом.
+                            <br/><br/>Ссылка на репозиторий: <a href="https://github.com/Nobirs/SFNewsPortal.git">https://github.com/Nobirs/SFNewsPortal.git</a> .
+                        </p>
+                    </div>
+                    <div class="project__item seaBattle__project">
+                        <img class="project__image" src="images/SeaBattle.gif" alt="SeaBattle">
+                        <p class="project__description">
+                            Консольная версия морского боя(можно играть одному или с кем-то). Написана на Python
+                            с использованием библиотеки curses.
+                            <br/><br/>Ссылка на репозиторий: <a href="https://github.com/Nobirs/SeaBattle.git">https://github.com/Nobirs/SeaBattle.git</a> .
+                        </p>
+                    </div>
+                    <div class="project__item tic-tac-toe__project project__lastItem">
+                        <img class="project__image" src="images/tic_tac_toe_neo.gif" alt="Tic-Tac-Toe">
+                        <p class="project__description">
+                            Консольная игра "Крестики-Нолики". Написанная на Python + curses.
+                            <br/><br/>Ссылка на репозиторий: <a href="https://github.com/Nobirs/TIC-TAC-TOE.git">https://github.com/Nobirs/TIC-TAC-TOE.git</a> .
+                        </p>
+                    </div>
+                </div>
             </details>
         </div>
         <div class="placeholder"></div>
     </main>
-    <div class="hidded__butterfly">
-        <img class="butterfly_image" src="images/butterfly.gif">
-    </div>
-    <footer class="ContactsFooter">
-        <ul>
-            <div class="FooterFirstPair">
-                <li class="github__item"><a href="https://github.com/Nobirs">Github Profile</a></li>
-                <li class="email__item">alex_nobirs13@mail.ru</li>
+    
+    <div class="butterfly_footer__container">
+        <div class="hidded__butterfly">
+            <div class="butterfly_placeholder"></div>
+            <img class="butterfly_image" src="images/butterfly.gif">
+        </div>
+        <footer class="ContactsFooter">
+            <div class="linksContainer">
+                <a href="https://github.com/Nobirs" class="github__item">GitHub Profile</a>
+                <a href="" class="linkedIn__item">LinkedIn(not yet)</a>
+                <a href="https://t.me/Alex_Nobirs" class="twitter__item">Twitter</a>
+                <a href="" class="email__item">Alex_Nobirs13@mail.ru</a>
             </div>
-            <li class="twitter__item"><a href="https://t.me/Alex_Nobirs">Twitter</a></li>
-            <li class="linkedIn__item">LinkedIn(In near future)</li>
-        </ul>
-    </footer>
+        </footer>
+    </div>
     
 </body>
 </html>

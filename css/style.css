@@ -23,6 +23,21 @@
     src: url(../fonts/BungeeSpice-Regular.ttf);
 }
 
+@font-face {
+    font-family: "Hey Comic";
+    src: url(../fonts/Hey\ Comic.ttf)
+}
+
+@font-face {
+    font-family: "Super WebComic";
+    src: url(../fonts/SuperWebcomicBros_Rusbyyakustick_-Regular_0.ttf);
+}
+
+@font-face {
+    font-family: "Donpoligrafbum-Bold";
+    src: url(../fonts/Donpoligrafbum-Bold.otf);
+}
+
 body {
     background-image: url(../images/bg.jpg);
     background-size: 50px;
@@ -40,7 +55,15 @@ header {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: outfit, sans-serif;
+    font-family: "Donpoligrafbum-Bold", sans-serif;
+}
+
+p {
+    text-align: justify;
+}
+
+summary {
+    font-family: "Hey Comic";
 }
 
 .Header {
@@ -50,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 .sticky {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: #201c1d;
   }
@@ -67,12 +91,13 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 4px 4px 15px 8px rgba(0,0,0,0.9);
     border-radius: 8px;
     margin: 3vh 6vw 3vh 6vw;
-    padding: 2vh 2vw;
+    padding: 2vh 1vw;
     width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 2px;
 }
 
 .profile_image {
@@ -92,9 +117,6 @@ h1, h2, h3, h4, h5, h6 {
     align-self: center;
     font-size: 1.7rem;
     margin-bottom: 1vh;
-}
-
-.profile__container {
 }
 
 .MenuImage {
@@ -136,7 +158,7 @@ nav.active ul li {
 
 .navLink {
     text-decoration: none;
-    font: outfit;
+    font-family: outfit;
     color: white;
 }
 
@@ -145,55 +167,217 @@ nav.active ul li {
     height: 12vh;
 }
 
+.butterfly_footer__container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
 .ContactsFooter {
+    display: none;
     position:fixed;
     bottom:0;
     left:0;
     width:100%;
-    height: 10vh;
+    height: 9vh;
     background-color: #140A0A;
-
 }
 
-.ContactsFooter ul {
+.linksContainer {
+    height: 100%;
     margin: 1vw;
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.ContactsFooter ul li,a {
-    font: raleway, sans-serif;
+.linksContainer > a {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.18rem;
     text-decoration: none;
-}
-
-.github__item {
-}
-
-.email__item {
-    margin-left: auto;
-}
-
-.twitter__item {
-    align-self: center;
-}
-
-.linkedIn__item {
-    align-self: center;
+    margin: 5px;
+    justify-self: center;
 }
 
 
-.FooterFirstPair {
-    display: flex;
-    flex-direction: row;
+.butterfly_placeholder {
+    min-width: 1vw;
+    width: auto;
 }
 
 .butterfly_image {
+
+    height: 30vh;
+    width: auto;
+    align-self: right;
+
     position: fixed;
-    top: 72vh;
+    top: 73vh;
     left: 75vw;
     display: none;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.projects__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.project__item {
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 1vw;
+    margin-bottom: 8vh;
+}
+
+.project__image {
+    width: 80vw;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px 8px rgba(155, 178, 182, 0.219);
+    margin-bottom: 1.5vh;
+}
+
+.project__lastItem {
+    margin-bottom: 1vh;
+}
+
+.project__item > p {
+    font-family: "Super WebComic";
+    font-size: 1.4rem;
+    color:rgba(246, 253, 254, 0.603)
+}
+
+.project__item > p > a {
+    font-family: bungeeSpice;
+    text-decoration: none;
+    color: rgba(242, 93, 118, 0.866);
+}
+
+.project__item > p > a {
+    word-wrap: break-word;
+}
+
+
+@media (min-width: 600px) {
+    header {
+        height: 7vh;
+    }
+
+    .MenuImage {
+        display: none;
+    }
+
+    .ContactsFooter {
+        display: block;
+        height: 7vh;
+    }
+
+    .linksContainer {
+        margin: 0 2vw;
+        grid-template-columns: repeat(4, 1fr);
+        container-type: inline-size;
+    }
+
+    .linksContainer > a {
+        align-self: center;
+        font-size: calc(14px + 1cqw);
+    }
+
+    details {
+        max-height: 98%;
+    }
+
+    details > summary {
+        list-style: none;
+    }
+
+    details > summary::-webkit-details-marker {
+        display:none;
+    }
+
+    .placeholder {
+        display: none;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin: 6vh 1vw;
+    }
+
+    .container {
+        margin: 3vh 1.5vw;
+        width: 50%;
+    }
+
+    .profile__container {
+        width: 34vw;
+        max-height: 82vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .MyProfile {
+        height: 100%;
+    }
+    .projects__container {
+        width: 58vw;
+        max-height: 82vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .Projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project__item {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1vh;
+        padding: 1.3vh;
+        box-shadow: 10px 10px 10px 2px rgba(225, 230, 233, 0.249), 
+                10px 10px 10px 2px rgba(225, 230, 233, 0.249) inset;
+        /* box-shadow: 10px 10px 10px 2px rgba(225, 230, 233, 0.249) inset,
+                10px 10px 10px 2px rgba(225, 230, 233, 0.249); */
+    }
+
+    .project__item:nth-of-type(1) {
+        margin-top: 5vh;
+    }
+
+    .project__item:last-child {
+        margin-bottom: 5vh;
+    }
+
+    .project__image {
+        width: 30%;
+        margin: 0 2vw;
+    }
+
+    .project__description {
+        width: 60%;
+    }
+
+    .project__item:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .project__item:nth-child(odd) > p {
+        text-align: left;
+    }
+
+    .project__item:nth-child(even) > p {
+        text-align: right;
+    }
+
+
+    
 }
